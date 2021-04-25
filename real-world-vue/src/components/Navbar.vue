@@ -1,8 +1,9 @@
 <!-- body part -->
 <template>
 <!-- Must have 1 root element -->
-  <div class="card">
-    <h4>{{title}}</h4>
+  <div id="nav">
+      <router-link :to="{ name: 'event-list' }">LIST</router-link> |
+      <router-link :to="{ name: 'event-create' }">Create</router-link>
   </div>
 </template>
 
@@ -23,14 +24,17 @@
 <!-- clothes (dressed up) -->
 <style scoped> 
 /* scoped means giving style identified to only this component. if not using, the given style in this style will set all over the h4 tags. */
-h4{
-  color: green;
+#nav {
+  padding: 30px;
 }
-.card {
-  border : 1px solid black;
-  margin: 0 auto;
-  width: 20%;
-  user-select: auto;
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
 }
 </style>
 

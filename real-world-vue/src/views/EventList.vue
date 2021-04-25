@@ -1,11 +1,11 @@
 
 <!-- Task
-1. Add Global styles
-2. Flesh out EventCard.vue
-3. Create Navbar.vue component -->
+[ v ] 1. Add Global styles
+[ v ] 2. Flesh out EventCard.vue
+[ v ] 3. Create Navbar.vue component -->
 
 <template>
-<div>
+<div class="event-list">
   <h1>Events Listing</h1>
     <!-- ES 6 shorthand 
      EventCard : EventCard -->
@@ -32,6 +32,12 @@ export default {
 <style>
 .block{
     display: block;
+}
+h1{
+    color : red
+}
+.event-list {
+    margin : 0 auto;
 }
 </style>
 
