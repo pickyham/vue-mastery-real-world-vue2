@@ -1,6 +1,15 @@
+
+<!-- Task
+1. Add Global styles
+2. Flesh out EventCard.vue
+3. Create Navbar.vue component -->
+
 <template>
 <div>
   <h1>Events Listing</h1>
+    <!-- ES 6 shorthand 
+     EventCard : EventCard -->
+    <EventCard />
   <router-link :to="{ name: 'event-show', params: { id :'1'}}" class="block" >Show Event #1</router-link>
   <router-link :to="{ name: 'event-show', params: { id :'2'}}" class="block">Show Event #2</router-link>
   <router-link :to="{ name: 'event-show', params: { id :'3'}}" class="block">Show Event #3</router-link>
@@ -8,8 +17,15 @@
 </template>
 
 <script>
-export default {
+//vimport (snippet)
+import EventCard from '@/components/EventCard.vue';
 
+export default {
+    //vcomponents
+    components: {
+        //put it here to use it as a child component.
+        EventCard
+    },
 }
 </script>
 
@@ -18,3 +34,4 @@ export default {
     display: block;
 }
 </style>
+
