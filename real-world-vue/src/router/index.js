@@ -8,6 +8,7 @@ import EventShow from '../views/EventShow.vue'
 
 Vue.use(VueRouter);
 
+const mode = 'history';
 const routes = [
   {
     path: "/",
@@ -20,9 +21,10 @@ const routes = [
     component: EventCreate,
   },
   {
-    path: "/event-show",
+    path: "/event/:id",
     name: "event-show",
     component: EventShow,
+    props:true
   },
   // SEO 고려한다면 alias 보다 redirect가 더 좋을 듯
   {
@@ -42,6 +44,7 @@ const routes = [
 
 const router = new VueRouter({
   routes,
+  mode
 });
 
 export default router;
