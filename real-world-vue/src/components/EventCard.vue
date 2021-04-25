@@ -21,8 +21,10 @@
 </script>
 
 <!-- clothes (dressed up) -->
-<style lang="scss" scoped>
-
+<style lang="scss" scoped> // scoped means giving style identified to only this component. if not using, the given style in this style will set all over the h4 tags.
+h4{
+  color: green;
+}
 </style>
 
 <!-- each tags set property 'lang' 
