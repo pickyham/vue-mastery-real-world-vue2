@@ -1,20 +1,28 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
-import About from "../views/About.vue";
+// import Home from "../views/Home.vue";
+// import About from "../views/About.vue";
+import EventList from '../views/EventList.vue'
+import EventCreate from '../views/EventCreate.vue'
+import EventShow from '../views/EventShow.vue'
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    name: "home",
-    component: Home,
+    name: "event-list",
+    component: EventList,
   },
   {
-    path: "/about-us",
-    name: "about",
-    component: About,
+    path: "/event-create",
+    name: "event-create",
+    component: EventCreate,
+  },
+  {
+    path: "/event-show",
+    name: "event-show",
+    component: EventShow,
   },
   // SEO 고려한다면 alias 보다 redirect가 더 좋을 듯
   {
